@@ -27,19 +27,19 @@ function getSimilarity(word1, word2) {
     return similar.length / Math.max(bigram1.length, bigram2.length);
 }
 
-function autoCorrect(word) {
+function autoCorrect(word, knownWords=universeOfDiscourse, similarityThreshold=0.5) {
     let maxSimilarity = 0;
     let mostSimilar = word;
 
-    for (let i = 0; i < universeOfDiscourse.length; i++) {
-        let similarity = getSimilarity(universeOfDiscourse[i], word);
+    for (let i = 0; i < knownWords.length; i++) {
+        let similarity = getSimilarity(knownWords[i], word);
         if (similarity > maxSimilarity) {
             maxSimilarity = similarity;
-            mostSimilar = universeOfDiscourse[i];
+            mostSimilar = knownWords[i];
         }
     }
 
-    return maxSimilarity > 0.5 ? mostSimilar : word;
+    return maxSimilarity > similarityThreshold ? mostSimilar : word;
 }
 
 function submit() {
