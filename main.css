@@ -1,0 +1,14 @@
+body {
+    position: absolute;
+    top: 42%;
+    margin-top: -42px;
+    margin-left: -42px;
+    left: 42%;
+    text-align: center;
+}
+#text, #output {
+    height: 30px;
+    font-size: 16pt;
+    padding: 5px;
+}
+
