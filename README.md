@@ -19,4 +19,4 @@ The functions provided are:
 
 - *getSimilarity(word1, word2)*: calculates the similarity of the bigrams of the two words.
 
-- *autoCorrect(word, knownWords, similarityThreshold)*: given an array of known or expected words, this function finds the most similar word in the array to the word passed in and, if the similarity is higher than the given threshold, returns the matched word.
+- *autoCorrect(word, knownWords, similarityThreshold)*: given an array of known or expected words, this function finds the most similar word in the array to the word passed in and, if the similarity is higher than the given threshold (a decimal value between 0 and 1), returns the matched word.
